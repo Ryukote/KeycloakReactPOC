@@ -1,0 +1,8 @@
+{
+    "realm": "Realm1",
+    "auth-server-url": "http://localhost:8080/auth/",
+    "ssl-required": "external",
+    "clientId": "accountconsole",
+    "public-client": true,
+    "confidential-port": 0
+  }

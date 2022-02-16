@@ -1,4 +1,4 @@
-import React from "react";
+import React, {useEffect} from "react";
 import { ReactKeycloakProvider } from "@react-keycloak/web";
 import keycloak from "./Keycloak";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
@@ -8,6 +8,13 @@ import SecuredPage from "./pages/Securedpage";
 import PrivateRoute from "./helpers/PrivateRoute";
 
 function App() {
+  useEffect(() => {
+    keycloak.init({
+      onLoad: 'check-sso',
+      silentCheckSsoRedirectUri: window.location.origin + '/silent-check-sso.html'
+    });
+  }, []);
+
  return (
    <div>
      <ReactKeycloakProvider authClient={keycloak}>

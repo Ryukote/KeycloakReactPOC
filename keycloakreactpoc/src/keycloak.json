@@ -1,8 +1,5 @@
 {
-    "realm": "Realm1",
+    "realm": "MUP-RECORD",
     "auth-server-url": "http://localhost:8080/auth/",
-    "ssl-required": "external",
-    "clientId": "accountconsole",
-    "public-client": true,
-    "confidential-port": 0
+    "clientId": "mup-test-client"
   }
